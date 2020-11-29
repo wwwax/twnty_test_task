@@ -23,7 +23,8 @@ img {
 }
 
 .container {
-  padding: 0 40px;
+  width: 280px;
+  margin: 0 auto;
 }
 
 /* INTRO */
@@ -218,4 +219,35 @@ img {
     color: #f0f0f1;
     text-decoration: none;
   }
+}
+
+/* CLIENTS */
+
+.clients {
+  background-color: #d9d0c0;
+}
+
+.clients_text {
+  padding: 60px 0 50px;
+  font-family: ttnorms_regular;
+  font-size: 17px;
+  line-height: 22px;
+  color: #1f242d;
+  text-align: center;
+}
+
+.clients_list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.clients_item {
+  width: 140px;
+  display: flex;
+  justify-content: center;
+}
+
+.clients_item {
+  margin-bottom: 20px;
 }
