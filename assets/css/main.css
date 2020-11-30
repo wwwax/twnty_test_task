@@ -408,6 +408,176 @@ img {
   }
 }
 
+/* CONTACTS */
+
+.contacts {
+  padding: 40px 0 50px;
+  background-color: #1f242d;
+}
+
+.contacts_title,
+.contacts_subtitle {
+  font-family: ttnorms_bold;
+  font-size: 24px;
+  line-height: 28px;
+  color: #e0dfde;
+}
+
+.contacts_subtitle {
+  margin-bottom: 40px;
+}
+
+.contacts_address,
+.contacts_tel,
+.contacts_email,
+.socials_link {
+  font-family: ttnorms_regular;
+  font-size: 14px;
+  line-height: 18px;
+  color: #e0dfde;
+}
+
+.contacts_address {
+  width: 160px;
+  margin-bottom: 40px;
+}
+
+.contacts_email {
+  margin-bottom: 30px;
+}
+
+.contacts .socials {
+  margin-bottom: 40px;
+  list-style: none;
+  display: flex;
+  align-items: center;
+}
+
+.contacts .socials_item {
+  margin-right: 10px;
+}
+
+.contacts .socials_item:last-child {
+  margin-right: 0;
+}
+
+.contacts .socials_link {
+  text-decoration: none;
+}
+
+/* FORM */
+
+.contacts_form {
+  display: flex;
+  flex-direction: column;
+}
+
+.contacts_input,
+.contacts_textarea {
+  padding: 15px 0 15px 10px;
+  border: none;
+}
+
+.contacts_input {
+  margin-bottom: 10px;
+}
+
+.contacts_textarea {
+  margin-bottom: 10px;
+}
+
+::placeholder {
+  font-family: ttnorms_regular;
+  font-size: 10px;
+  color: #888b8e;
+}
+
+/* .contacts_accept {
+  padding-top: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.contacts_accept input {
+  border: none;
+  margin-right: 8px;
+}
+
+.contacts_accept label {
+  width: 124px;
+  font-size: 7px;
+  line-height: 10px;
+  color: #e0dfde;
+} */
+
+/* ACCEPT */
+
+.contacts_accept {
+  position: relative;
+  width: 120px;
+  padding-left: 26px;
+  font-size: 7px;
+  line-height: 10px;
+  color: #e0dfde;
+  cursor: pointer;
+  user-select: none;
+}
+
+/* hide the browser`s default checkbox */
+.contacts_accept input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 1px;
+  left: 0;
+  height: 16px;
+  width: 16px;
+  background-color: #e0dfde;
+  border-top: 1px solid #9fa1a3;
+  border-right: 1px solid #9fa1a3;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: '';
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.contacts_accept input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.contacts_accept .checkmark:after {
+  left: 4px;
+  top: 0;
+  width: 5px;
+  height: 10px;
+  border: solid #1f242d;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+/* CONTACTS_TEXT */
+
+.contacts_text {
+  padding-top: 20px;
+  font-family: ttnorms_bold;
+  font-size: 20px;
+  color: #e0dfde;
+}
+
 /* VISUALLY-HIDDEN */
 
 .visually-hidden:not(:focus):not(:active),
