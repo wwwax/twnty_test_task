@@ -412,7 +412,7 @@ img {
 
 .contacts {
   padding: 40px 0 50px;
-  background-color: #1f242d;
+  background-color: #1c242c;
 }
 
 .contacts_title,
@@ -686,6 +686,71 @@ img {
 
   .contacts_form textarea {
     height: 280px;
+  }
+}
+
+/* FOOTER */
+
+.footer {
+  border-top: 1px solid #f2f1ef;
+  padding: 25px 0 30px;
+  background-color: #1c242c;
+}
+
+.footer_logo {
+  display: block;
+  width: 16px;
+  height: 16px;
+  background-image: url(../img/footer_logo/footer_logo_small.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-bottom: 30px;
+}
+
+.footer_row_inner {
+  margin-bottom: 40px;
+}
+
+.footer_text {
+  font-family: ttnorms_regular;
+  font-size: 14px;
+  line-height: 18px;
+  color: #f2f1ef;
+}
+
+@media (min-width: 768px) {
+  .footer {
+    padding: 30px 0;
+  }
+
+  .footer_inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .footer_logo {
+    margin-bottom: 0;
+    width: 32px;
+    height: 32px;
+    background-image: url(../img/footer_logo/footer_logo_big.png);
+  }
+
+  .footer_row {
+    width: 300px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .footer_row_inner {
+    margin-bottom: 0;
+    display: flex;
+    align-items: center;
+  }
+
+  .footer_row_inner .impressum {
+    margin-right: 20px;
   }
 }
 
