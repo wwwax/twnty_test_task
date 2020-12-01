@@ -478,17 +478,16 @@ img {
   border: none;
 }
 
-.contacts_input {
-  margin-bottom: 10px;
-}
-
+.contacts_input,
 .contacts_textarea {
+  margin-bottom: 10px;
   margin-bottom: 10px;
 }
 
 ::placeholder {
   font-family: ttnorms_regular;
   font-size: 10px;
+  line-height: 14px;
   color: #888b8e;
 }
 
@@ -512,10 +511,15 @@ img {
 
 /* ACCEPT */
 
+.text_underline {
+  text-decoration: underline;
+}
+
 .contacts_accept {
   position: relative;
   width: 120px;
   padding-left: 26px;
+  font-family: ttnorms_regular;
   font-size: 7px;
   line-height: 10px;
   color: #e0dfde;
@@ -545,27 +549,25 @@ img {
 }
 
 /* Create the checkmark/indicator (hidden when not checked) */
-.checkmark:after {
+.checkmark::after {
   content: '';
   position: absolute;
   display: none;
 }
 
 /* Show the checkmark when checked */
-.contacts_accept input:checked ~ .checkmark:after {
+.contacts_accept input:checked ~ .checkmark::after {
   display: block;
 }
 
 /* Style the checkmark/indicator */
-.contacts_accept .checkmark:after {
+.contacts_accept .checkmark::after {
   left: 4px;
   top: 0;
   width: 5px;
   height: 10px;
   border: solid #1f242d;
   border-width: 0 3px 3px 0;
-  -webkit-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
   transform: rotate(45deg);
 }
 
@@ -576,6 +578,82 @@ img {
   font-family: ttnorms_bold;
   font-size: 20px;
   color: #e0dfde;
+}
+
+@media (min-width: 768px) {
+  .contacts {
+    padding: 80px 0;
+    background-color: #1f242d;
+  }
+
+  .contacts_inner {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .contacts_title,
+  .contacts_subtitle {
+    font-size: 50px;
+    line-height: 54px;
+  }
+
+  .contacts_subtitle {
+    margin-bottom: 250px;
+  }
+
+  .contacts_form {
+    width: 300px;
+  }
+
+  .contacts_address,
+  .contacts_tel,
+  .contacts_email,
+  .socials_link {
+    font-size: 18px;
+    line-height: 26px;
+  }
+
+  .contacts_input,
+  .contacts_textarea {
+    margin-bottom: 20px;
+    margin-bottom: 20px;
+  }
+
+  ::placeholder {
+    font-size: 18px;
+    line-height: 26px;
+  }
+
+  .contacts_input,
+  .contacts_textarea {
+    padding: 20px;
+  }
+
+  .contacts_accept {
+    width: 260px;
+    padding-left: 46px;
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  .checkmark {
+    top: 3px;
+    left: 0;
+    width: 32px;
+    height: 32px;
+  }
+
+  .contacts_accept .checkmark::after {
+    left: 8px;
+    top: 2px;
+    width: 14px;
+    height: 16px;
+  }
+
+  .contacts_text {
+    font-size: 36px;
+    line-height: 38px;
+  }
 }
 
 /* VISUALLY-HIDDEN */
