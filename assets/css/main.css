@@ -12,6 +12,10 @@
 
 /* COMMON */
 
+body.lock {
+  overflow: hidden;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -112,7 +116,7 @@ img {
 
   .intro_subtitle {
     margin-bottom: 45px;
-    width: 1080px;
+    width: 630px;
     font-size: 27px;
     line-height: 36px;
   }
@@ -137,6 +141,7 @@ img {
   }
 
   .intro_subtitle {
+    width: 1080px;
     font-size: 34px;
     line-height: 40px;
   }
@@ -165,14 +170,16 @@ img {
   width: 100%;
 }
 
-.header::before {
+/* .header::before {
   content: '';
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-}
+  z-index: 2;
+  background-color: tomato;
+} */
 
 .header_inner {
   position: relative;
@@ -192,6 +199,7 @@ img {
 /* BURGER */
 
 .burger {
+  display: block;
   position: relative;
   z-index: 3;
   width: 30px;
@@ -239,9 +247,83 @@ img {
   }
 }
 
-/* MENU */
+/* NAV */
+
+.nav {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: -100%;
+  left: 0;
+  background-color: #1f242d;
+  transition: all 0.3s ease 0s;
+  overflow: auto;
+}
+
+.nav.active {
+  top: 0;
+}
 
 .menu_list {
+  margin: 0 auto;
+  width: 290px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.menu_item {
+  padding-bottom: 30px;
+}
+
+.menu_link {
+  font-family: ttnorms_bold;
+  font-size: 34px;
+  line-height: 48px;
+  color: #f0f0f1;
+  text-decoration: none;
+}
+
+.menu_desktop {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .menu_list {
+    width: 630px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .nav {
+    display: none;
+  }
+
+  .menu_desktop {
+    width: 630px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .menu_desktop_link {
+    margin-right: 50px;
+    font-family: ttnorms_regular;
+    font-size: 18px;
+    text-decoration: none;
+    color: #f2f1ef;
+  }
+
+  .menu_desktop_link.contact,
+  .menu_desktop_link.lang {
+    margin-right: 0;
+  }
+}
+
+/* MENU */
+
+/* .menu_list {
   list-style: none;
   display: flex;
   position: relative;
@@ -260,13 +342,14 @@ img {
   .menu {
     width: 100%;
     height: 100%;
-    /* padding: 70px 10px 20px 10px; */
     position: fixed;
     top: -100%;
     left: 0;
     transition: top 0.3s linear;
     overflow: auto;
     display: flex;
+
+    background-color: red;
   }
 
   .menu.active {
@@ -279,6 +362,7 @@ img {
     width: 100%;
     height: 100%;
     background-color: #1f242d;
+    background-color: red;
   }
 
   .menu_item {
@@ -297,7 +381,7 @@ img {
     color: #f0f0f1;
     text-decoration: none;
   }
-}
+} */
 
 /* CLIENTS */
 
@@ -556,7 +640,7 @@ img {
 ::placeholder {
   font-family: ttnorms_regular;
   font-size: 10px;
-  line-height: 14px;
+  line-height: 1;
   color: #888b8e;
 }
 

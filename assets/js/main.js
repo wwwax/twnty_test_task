@@ -1,5 +1,6 @@
 const burger = document.querySelector('.burger');
-const menu = document.querySelector('.menu');
+const nav = document.querySelector('.nav');
+const body = document.querySelector('body');
 let showMenu = false;
 
 burger.addEventListener('click', onBurgerClick);
@@ -7,11 +8,13 @@ burger.addEventListener('click', onBurgerClick);
 function onBurgerClick() {
   if (!showMenu) {
     burger.classList.add('active');
-    menu.classList.add('active');
+    nav.classList.add('active');
+    body.classList.add('lock');
     showMenu = true;
   } else {
     burger.classList.remove('active');
-    menu.classList.remove('active');
+    nav.classList.remove('active');
+    body.classList.remove('lock');
     showMenu = false;
   }
 }
