@@ -722,7 +722,6 @@ img {
 @media (min-width: 768px) {
   .contacts {
     padding: 80px 0;
-    background-color: #1f242d;
   }
 
   .contacts_inner {
