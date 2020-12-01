@@ -144,25 +144,27 @@
           <div>
             <!-- FORM -->
             <form class="contacts_form">
-              <input class="contacts_input" type="text" placeholder="Name" />
-              <input class="contacts_input" type="text" placeholder="E-Mail" />
+              <!-- ROW -->
+              <div class="form_row">
+                <input class="contacts_input" type="text" placeholder="Name" />
+                <input class="contacts_input" type="text" placeholder="E-Mail" />
+              </div>
               <input class="contacts_input" type="text" placeholder="Betreff" />
-              <textarea
-                class="contacts_textarea"
-                rows="16"
-                placeholder="Nachricht"
-              ></textarea>
+              <textarea class="contacts_textarea" placeholder="Nachricht"></textarea>
 
-              <label class="contacts_accept">
-                Ich habe die
-                <span class="text_underline">Datenschutzbestimmungen</span> zur Kenntnis
-                genommen.
-                <input type="checkbox" />
-                <span class="checkmark"></span>
-              </label>
+              <!-- ROW -->
+              <div class="form_row">
+                <label class="contacts_accept">
+                  Ich habe die
+                  <span class="text_underline">Datenschutzbestimmungen</span> zur Kenntnis
+                  genommen.
+                  <input type="checkbox" />
+                  <span class="checkmark"></span>
+                </label>
+
+                <div class="contacts_text">Senden</div>
+              </div>
             </form>
-
-            <div class="contacts_text">Senden</div>
           </div>
         </div>
       </div>
